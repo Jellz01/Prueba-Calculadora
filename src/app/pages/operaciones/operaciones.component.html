@@ -1,0 +1,36 @@
+
+
+
+<div class="calcladoraD">
+    <form id="courseForm" class="course-form">
+        <textarea #SCalc class ="text"></textarea>
+        <button class ="boton1">1</button>
+        <button class ="boton2">2</button>
+        <button class ="boton3">3</button>
+        <button class ="boton4">4</button>
+        <button class ="boton5">5</button>
+        <button class ="boton6">6</button>
+        <button class ="boton7">7</button>
+        <button class ="boton8">8</button>
+        <button class ="boton9">9</button>
+        <button class ="botonMAS">+</button>
+        <button class ="botonMENOS">-</button>
+        <button class ="botonPOR">*</button>
+        <button class ="botonPARA">/</button>
+        <button (click)="addCalculo()" type="submit" class ="botonIGUAL">=</button>
+    </form>    
+</div>
+
+
+    <div id="listadocalculos" class="listado">
+        <h2>Listado de calculos:</h2>
+        <div class="Calc">
+            <div *ngFor="let Calc of calculos" class="Calc">
+                <p><span class="curso-caracteristica">Nombre:</span> </p>
+                
+                    
+                    <button (click)="eliminarCalculo(Calc.id)"class="boton-general">
+                        Eliminar</button>
+            </div>
+        </div>
+    </div>
